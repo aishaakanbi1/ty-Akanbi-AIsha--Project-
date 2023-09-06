@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Admin Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .navbar {
+      background-color: rgb(0, 140, 255);
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    
+    .navbar a {
+      float: left;
+      display: block;
+      color: bisque;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    .navbar a:hover {
+      background-color: rgb(0, 140, 255);
+    }
+    .navbar a.active{
+  border-bottom: 3px solid black;
+  color:black;
+}
+    
+    
+    .container {
+      max-width: 800px;
+      margin: 80px auto 20px;
+      padding: 20px;
+      background-color: bisque;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    
+    .welcome-sign {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333333;
+      font-size: 32px;
+    }
+    
+    .menu {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .menu ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    .menu ul li a {
+      text-decoration: none;
+      padding: 12px 24px;
+      background-color: rgb(0, 140, 255);
+      color: honeydew;
+      border-radius: 5px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .menu ul li a:hover {
+      background-color: rgb(0, 140, 255);
+    }
+    
+    .pretty-pictures {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .pretty-pictures img {
+      display: inline-block;
+      margin: 10px;
+      width: 550px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      
+    }
+    .logout-btn {
+      text-align: right;
+    }
+      
+    .logout-btn button {
+      padding: 10px 20px;
+      background-color: black;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .logout-btn button:hover {
+      background-color: #d32f2f;
+    }
+  </style>
+   <script>
+    function handleLogout() {
+      // Perform any additional logout logic here
+
+      // Redirect to the login page
+      window.location.href = "login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="navbar">
+   <a href="#"><img src="./Oduduwa university logo copy.jpg" style="height: 10vh; width: 10vh;"></a> 
+   <br>
+    <a href="#" class="nav-link active">Home</a>
+    <div class="logout-btn">
+      <button onclick="handleLogout()">Logout</button>
+    </div>
+  
+  
+  
+  </div>
+
+  <div class="container">
+    <h1 class="welcome-sign" style="color: black; display: flex; margin: right 200px; margin-top: 50px;"> Welcome to Oduduwa medical center Management System</h1>
+
+     
+    <div class="pretty-pictures">
+      <img src="./unnamed.jpg" alt="THE CENTER">
+      <BR> <br>
+    <div class="menu">
+      <ul>
+        <li><a href="register.php">Register New Patient</a></li>
+        <li><a href="prescription.php">Create Prescription</a></li>
+        <br>
+        <br>
+        <br>
+        <br>
+        <li><a href="database.php">View Prescriptions</a></li>
+        <li><a href="viewbookings.php">View Bookings</a></li>
+        <li><a href="viewpatient.php">View Patient Database</a></li>
+         <style>
+  .footer {
+    background-color: rgba(44, 44, 90, 0.671);
+    color: #ffffff;
+    text-align: center;
+    padding: 60px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="navbar">
+  <!-- Navbar content -->
+</div>
+
+<div class="container">
+  <!-- Container content -->
+</div>
+
+<div class="footer">
+  &copy; 2023 Hospital Admin Panel. All rights reserved.
+      </ul>
+    </div>
+    </div>
+  </div>
+ 
+</div>
+</body>
+</html>

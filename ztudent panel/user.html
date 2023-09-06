@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fb;
+      color: #333;
+      transition: background-color 0.3s ease;
+    }
+
+    header {
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    #content {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    form button[type="submit"],
+    #logout-btn,
+    #send-btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    #user-panel {
+      display: none;
+    }
+
+    #chatbox {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    #chat-messages {
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    #chat-input {
+      width: 70%;
+      padding: 10px;
+    }
+
+    #send-btn {
+      width: 25%;
+      margin-left: 5px;
+    }
+
+    .dark-theme {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const loginForm = document.getElementById("login-form");
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+      const usernameDisplay = document.getElementById("username-display");
+      const logoutBtn = document.getElementById("logout-btn");
+      const themeToggle = document.getElementById("theme-toggle");
+      const chatInput = document.getElementById("chat-input");
+      const chatMessages = document.getElementById("chat-messages");
+      const sendBtn = document.getElementById("send-btn");
+      const userPanel = document.getElementById("user-panel");
+
+      // Function to handle login
+      loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        // Perform authentication logic here (e.g., check against user database)
+        // If successful, display user panel and update username display
+        if (username === "admin" && password === "password") {
+          usernameDisplay.textContent = username;
+          loginForm.reset();
+          loginForm.style.display = "none";
+          userPanel.style.display = "block";
+        } else {
+        var errorMessage = document.getElementById("error-message");
+        errorMessage.textContent = "Incorrect password. Please try again.";
+      }
+      });
+
+      // Function to handle logout
+      logoutBtn.addEventListener("click", function() {
+        loginForm.style.display = "block";
+        userPanel.style.display = "none";
+      });
+
+      // Function to toggle theme (light/dark)
+      themeToggle.addEventListener("click", function() {
+        const body = document.body;
+        body.classList.toggle("dark-theme");
+      });
+
+      // Function to send chat messages
+      sendBtn.addEventListener("click", function() {
+        const message = chatInput.value;
+        if (message.trim() !== "") {
+          const messageElement = document.createElement("div");
+          messageElement.textContent = message;
+          chatMessages.appendChild(messageElement);
+          chatInput.value = "";
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Oduduwa Univerity Medical Center</h1>
+    <button id="theme-toggle">Toggle Theme</button>
+  </header>
+  
+  <div id="content">
+    <form id="login-form">
+      <h2>Login</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Login</button>
+    </form>
+    
+    <div id="user-panel">
+      <h2>Welcome, <span id="username-display"></span>!</h2>
+      <button id="logout-btn">Logout</button>
+      <div id="chatbox">
+        <h3>Chat with Doctor</h3>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pharmacy.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./index.html"><img src="./Oduduwa university logo.jpg" alt="logo"></a>  
+    
+    <ul>
+    <li><a href="./index.html" class="nav-link">Home</a></li>
+    
+    <li><a href="./about.html" class= "nav-link" data-page="about">About</a></li>
+    
+    <li> <a href="./pharmacy.html" class="nav-link active" data-page="contact"> Pharmacy</a></li> 
+    <li> <a href="Login.html" class="different"><button class="login"> LOGIN</button></a></li>
+    </ul>
+    </div> 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <style>
+        /* Styles for general layout */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        
+        header {
+          background-color: #f0f0f0;
+          padding: 20px;
+        }
+        
+        main {
+          padding: 20px;
+        }
+        
+        footer {
+          background-color: #232f3e;
+          color: #fff;
+          padding: 40px;
+          text-align: center;
+        }
+        
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+        
+        /* Styles for search button */
+        .search-container {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        
+        .search-input {
+          padding: 10px;
+          width: 300px;
+          flex: 1;
+        }
+        .search-icon {
+      width: 20px;
+      height:30px;
+      margin-right: 5px;
+      background-image: url('./searchicon.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+        
+        /* Styles for upload prescription section */
+        .upload-container {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        
+        .upload-button {
+          padding: 10px 20px;
+          background-color: #2196f3;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          margin-left: -30px;
+        }
+        .drug-list {
+      margin-bottom: 20px;
+    }
+
+    .drug-list ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    .drug-list li {
+      margin-bottom: 5px;
+    }
+
+    /* Styles for ads */
+    .ads-container {
+      margin-bottom: 20px;
+    }
+
+    .ad {
+      background-color: rgb(177, 69, 69);
+      padding: 20px;
+      margin-bottom: 10px;
+      border-radius: 30px;
+    }
+
+      </style>
+    </head>
+    <body>
+      <header>
+        <div class="container">
+          <h1>Welcome to Oduduwa University Medical Centre! &#9786;</h1>
+        </div>
+      </header>
+    
+      <main>
+        <div class="container">
+          <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search for medication...">
+            <div class="search-icon"></div>
+          </div>
+    
+          <div class="upload-container">
+            <label for="prescription-file">Upload Prescription:</label>
+            <input type="file" id="prescription-file">
+            <button class="upload-button">Upload</button>
+          </div>
+    
+          <br>
+          <!-- Other content and sections -->      <section class="drug-list">
+          
+            <button class="order" style="background-color: #2196f3; color: black; align-items: center;  border: none;
+            cursor: pointer; margin-left: 300px;">Order now</button> 
+            <br> <br> <br>
+             <img style="width:100vh ;height: 50%;"  src="./drugs.jpg"
+            >
+            <div  style="background-color: gray; border-radius: 40px;">
+        <h2>Available Medications:</h2>
+        <ul 
+        ;">
+          <li>Medication A</li>
+          <li>Medication B</li>
+          <li>Medication C</li>
+          <li>Medication D</li>
+        </ul></div>
+      </section>
+
+      <section class="ads-container">
+        <h2>Special Offers:</h2>
+        <div class="ad">
+          <h3>Get 20% off on Medication X!</h3>
+          <p>Use coupon code "SAVE20" at checkout.</p>
+        </div>
+        <div class="ad">
+          <h3>Free Shipping on all orders above $50!</h3>
+          <p>No coupon code required. Limited time offer.</p>
+        </div>
+      </section>
+
+      <!-- Other content and sections -->
+
+    </div>
+  </main>
+
+          
+    
+        </div>
+      </main>
+    
+      <footer>
+        <div class="container">
+          <p>© 2023 Pharmacy Page. All rights reserved.</p>
+        </div>
+      </footer>
+    
+      <script>
+        // JavaScript code if needed
+      </script>
+</body>
+</html>

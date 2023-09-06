@@ -1,0 +1,423 @@
+body{
+    margin: 0;
+    background-color: #fff;
+}
+.top-container{
+    background-image: url(./pexels-suzy-hazelwood-1124884.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+.top-container h1{
+    color: white;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+}
+.text{
+    margin: 50px 5%;
+    font-family: cursive;
+}
+.navbar{
+display: flex;
+position: fixed;
+background-color: #0788d1;
+width: 100%;
+height: 20%;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+z-index: 999;
+
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-family: cursive;
+
+}
+
+.navbar ul li a:hover{
+    color: orangered;
+}
+button{
+  background-color: black;
+ color: white;
+ font-family: cursive;
+ margin-top: -10px;
+ margin-left: 50px;
+ margin-right: 50px;
+ width: 120px;
+ height: 50px;
+ border-radius: 9px;}
+
+
+
+.navbar a.active{
+  border-bottom: 3px solid black;
+  color: white ;
+} 
+img {
+    background-size: cover;
+}
+
+
+
+  .appointment-form {
+    display: flex;
+    align-items: center;
+    background-color: #0788d1;
+    width: 80%;
+  }
+
+  
+  label, select, input, button {
+    margin: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input[type="datetime-local"], select {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    color: #333;
+  }
+  
+  .book-now-btn {
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 70px;
+    text-decoration: none;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:#0788d1;
+    padding: 10px;
+    width: 80%;
+    height: 70%;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 100px;
+    color: white;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  .gallery-item:hover {
+    background-color: black;
+    z-index: 1;
+    transform: scale(1.2);
+    color: white;
+    height: 250px;
+    width: 50px;
+    
+  }
+  
+  .gallery-item:hover .gallery-desc {
+    opacity: 1;
+  }
+  
+  .gallery-item img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .gallery-desc h2, .gallery-desc p {
+    margin: 0;
+  }
+  
+
+  
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.mid-sen{
+  margin-top: -250px ;
+   text-align: left; 
+   margin-left: 120px; 
+   color: #5a5951;
+}
+
+      .navbar{
+        display: flex;
+        position: fixed;
+        background-color: #0788d1;
+        width: 100%;
+        height: 20%;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+  
+        .appointment-form {
+          display: flex;
+          align-items: center;
+          background-color: #0788d1;
+          width: 60%;
+        }
+
+        @media only screen and (max-width: 480px) {
+          body {
+            width: 80%;
+            font-family: monospace;
+          }
+          .navbar{
+            display: flex;
+        position: fixed;
+        background-color: #0788d1;
+        width: 100%;
+        height: 20%;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        
+        }
+        
+        .navbar ul{
+            display: flex;
+            list-style-type: none;
+        }
+        
+        .navbar ul li a{
+            text-decoration: none;
+            margin: 0 10px;
+            color: black;
+            font-family: monospace;
+        
+        }
+        
+        .navbar ul li a:hover{
+            color: orangered;
+        }
+        button{
+        background-color: black;
+        color: white;
+        margin-top: -10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        font-family: monospace;
+        width: 120px;
+        height: 50px;
+        border-radius: 9px;}
+        
+        
+        
+        .navbar a.active{
+          border-bottom: 3px solid black;
+          color: white ;
+        } 
+        img {
+            background-size: cover;
+        }
+        
+          .appointment-form {
+            display: flex;
+            align-items: center;
+            background-color: #0788d1;
+            width: 80%;
+          }
+        
+          
+          label, select, input, button {
+            margin: 5px;
+          }
+          
+          label {
+            font-weight: bold;
+          }
+          
+          input[type="datetime-local"], select {
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            color: #333;
+            font-size: 16px;
+          }
+          
+          input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+            color: #333;
+          }
+          
+          .book-now-btn {
+            background-color: black;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-left: 70px;
+            text-decoration: none;
+           
+          }
+           .mid-sen {
+            margin-top: -150px ; 
+            text-align: left; 
+            margin-left: 120px;
+             color: #5a5951;}
+        }
+
+
+
+        .gallery {
+          display: flex;
+          width: 80%;
+          height: 120%;
+          align-items: center;
+        }
+        
+        .image-container {
+          position: relative;
+          margin-right: 10px;
+
+        }
+        
+        .image-container img {
+          width: 90px;
+          transition: transform 0.3s;
+        }
+        
+        .image-container .caption {
+          position: absolute;
+          bottom: -20px;
+          left: 0;
+          width: 100%;
+          height: 40px;
+          text-align: center;
+          font-size: 13px;
+          opacity: 1;
+          transition: font-size 0.3s, opacity 0.3s;
+        }
+        
+        .image-container:hover img {
+          transform: scale(1.2);
+        }
+        
+        .image-container:hover .caption {
+          font-size: 13px;
+          
+        }
+        .scrollable-gallery {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.image-box {
+  flex: 0 0 auto;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #0788d1;
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 200px;
+}
+
+.image-box .caption {
+  background-color: #0788d1;
+  margin-top: 10px;
+}
+footer {
+  background-color: #232f3e;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1 0 25%;
+  max-width: 25%;
+  margin-bottom: 20px;
+}
+
+.column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.column ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.column li {
+  margin-bottom: 5px;
+}
+
+.credits,
+.contact {
+  text-align: center;
+  margin-top: 40px;
+}
+

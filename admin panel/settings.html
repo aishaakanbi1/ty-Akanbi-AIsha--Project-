@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Settings - Hospital Admin Panel</title>
+  <style>
+    :root {
+      --primary-color: #333333;
+      --secondary-color: #ffffff;
+      --button-color: #4CAF50;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--secondary-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 10px;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--secondary-color);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #dddddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      text-align: center;
+    }
+
+    .form-actions button {
+      padding: 10px 20px;
+      background-color: var(--button-color);
+      color: var(--secondary-color);
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .form-actions button:hover {
+      background-color: #45a049;
+    }
+
+    /* Theme selector */
+    .theme-selector {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .theme-selector label {
+      margin-right: 10px;
+    }
+  </style>
+  <script>
+    // Function to change the theme
+    function changeTheme(theme) {
+      if (theme === "default") {
+        document.documentElement.style.setProperty("--primary-color", "#333333");
+        document.documentElement.style.setProperty("--secondary-color", "#ffffff");
+        document.documentElement.style.setProperty("--button-color", "#4CAF50");
+      } else if (theme === "light") {
+        document.documentElement.style.setProperty("--primary-color", "#ffffff");
+        document.documentElement.style.setProperty("--secondary-color", "#333333");
+        document.documentElement.style.setProperty("--button-color", "#2196F3");
+      } else if (theme === "dark") {
+        document.documentElement.style.setProperty("--primary-color", "#333333");
+        document.documentElement.style.setProperty("--secondary-color", "#eeeeee");
+        document.documentElement.style.setProperty("--button-color", "#FF5722");
+      }
+
+      // Save the selected theme to localStorage for persistence
+      localStorage.setItem("theme", theme);
+    }
+
+    // Function to load the saved theme from localStorage
+    function loadTheme() {
+      var savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        changeTheme(savedTheme);
+      }
+    }
+  </script>
+</head>
+<body onload="loadTheme()">
+  <div class="navbar">
+    <h1>Hospital Admin Panel</h1>
+  </div>
+
+  <div class="container">
+    <h1>Settings</h1>
+
+    <form>
+      <div class="form-group">
+        <label for="setting1">Setting 1:</label>
+        <input type="text" id="setting1" placeholder="Enter setting 1">
+      </div>
+
+      <div class="form-group">
+        <label for="setting2">Setting 2:</label>
+        <input type="text" id="setting2" placeholder="Enter setting 2">
+      </div>
+
+      <div class="theme-selector">
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select" onchange="changeTheme(this.value)">
+          <option value="default">Default</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" onclick="saveSettings()">Save Settings</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
